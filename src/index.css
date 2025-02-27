@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #45ac4b;
+  --color-secondary: #2f7a34;
+  --color-backgroundLight: #f8fafc;
+  --color-backgroundDark: #1e293b;
+  --color-textPrimary: #ffffff;
+  --color-textSecondary: #e2e8f0;
+
+  /* Darkest Mode Colors */
+  --color-darkest-bg: #121212;
+  --color-darkest-card: #1a1a1a;
+  --color-darkest-border: #292929;
+  --color-darkest-text: #d1d5db;
+  --color-darkest-muted: #9ca3af;
+}
+
+.darkest {
+  --color-backgroundLight: var(--color-darkest-bg);
+  --color-backgroundDark: var(--color-darkest-card);
+  --color-textPrimary: var(--color-darkest-text);
+  --color-textSecondary: var(--color-darkest-muted);
+}
+
+.animation {
+  transition: all 0.5s ease-in;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+.zCard {
+  z-index: 1;
+}
+
+.totalTask {
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+}
+.totalComplete {
+  background: linear-gradient(135deg, #f97316, #ec4899);
+}
+.totalPending {
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

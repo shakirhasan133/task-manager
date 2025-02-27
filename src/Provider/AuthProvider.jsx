@@ -13,12 +13,20 @@ import { useEffect, useState } from "react";
 
 import axios from "axios";
 import { AuthContext } from "./AuthContext";
+import { useNavigate } from "react-router";
 
 // eslint-disable-next-line react/prop-types
 const AuthProvider = ({ children }) => {
   const [Loading, setLoading] = useState(true);
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(true);
+  const [isRefetch, setRefetch] = useState(false);
+
+  //
+  const TrigarRefetch = () => {
+    setRefetch((prev) => !prev);
+  };
 
   // Sign in with Google
   const signInWithGoogleEmail = () => {
@@ -100,6 +108,10 @@ const AuthProvider = ({ children }) => {
     setError,
     updateUserData,
     resetPassword,
+    isSideMenuOpen,
+    setIsSideMenuOpen,
+    TrigarRefetch,
+    isRefetch,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

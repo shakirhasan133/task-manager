@@ -1,17 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class",
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"], // Ensure paths are correct
   theme: {
     extend: {
       colors: {
-        primary: "#3B82F6", // Blue
-        secondary: "#64748B", // Slate
-        accent: "#22C55E", // Green
-        danger: "#EF4444", // Red
-        backgroundLight: "#F8FAFC", // Light Background
-        backgroundDark: "#1E293B", // Dark Background
+        primary: "#45ac4b", // Main Green
+        secondary: "#2f7a34", // Darker Green
+        backgroundLight: "#f8fafc", // Light mode background
+        backgroundDark: "#1e293b", // Dark mode background
+        textPrimary: "#ffffff", // White text
+        textSecondary: "#e2e8f0", // Light gray text
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

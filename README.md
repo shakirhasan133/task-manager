@@ -80,3 +80,7 @@ npm install tailwindcss daisyui @tanstack/react-query
 npm install axios react-hot-toast react-icons
 npm install express mongoose jsonwebtoken cors bcryptjs dotenv
 ```
+
+## 📷 Screenshot
+
+![alt text](image.png)

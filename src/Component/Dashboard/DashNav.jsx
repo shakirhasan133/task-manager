@@ -162,7 +162,7 @@ const DashNav = () => {
       {/* Modal */}
       <dialog
         id="my_modal_1"
-        className="modal min-w-xl mx-auto p-5 my-auto rounded-lg shadow-xl relative transition-all animation"
+        className="modal w-full md:min-w-xl mx-auto p-5 my-auto rounded-lg shadow-xl relative transition-all animation"
       >
         <div className="modal-box">
           <h2 className="text-lg font-bold text-gray-800 mb-4">Add New Task</h2>
